@@ -6,7 +6,7 @@ from src.textSummarizer.config.configuration import DataTransformationConfig
 class DataTransformation:
     def __init__(self,config: DataTransformationConfig):
         self.config=config
-        self.tokenizer=AutoTokenizer.from_pretrained("google/pegasus-xsum")
+        self.tokenizer=AutoTokenizer.from_pretrained(self.config.tokenizer_name, use_fast=False)
         print(self.tokenizer)
 
     def convert_examples_to_features(self,example_batch):
@@ -21,5 +21,5 @@ class DataTransformation:
         }
     def convert(self):
         dataset_samsum = load_from_disk(self.config.data_path)
-        dataset_samsum_pt =dataset_samsum.map()
+        dataset_samsum_pt =dataset_samsum.map(self.convert_examples_to_features, batched = True)
         dataset_samsum_pt.save_to_disk(os.path.join(self.config.root_dir,"samsum_dataset"))
