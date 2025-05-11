@@ -1,95 +1,106 @@
-Text Summarizer
+# 📝 Text Summarizer
 
-A Python-based text summarization pipeline utilizing Hugging Face Transformers and PyTorch Lightning. This project implements an abstractive summarization model using the Pegasus architecture fine-tuned on the SAMSum dataset. It includes a modular training pipeline, configuration management, and a Streamlit-based web interface for interactive summarization.
-GitHub
+A Python-based text summarization pipeline built using **Hugging Face Transformers** and **PyTorch Lightning**.  
+This project implements an **abstractive summarization model** using the **Pegasus** architecture fine-tuned on the **SAMSum dataset**.  
+It features a modular pipeline for data processing, training, evaluation, and a **Streamlit-based web interface** for real-time summarization.
 
-🚀 Features
-Abstractive summarization using the Pegasus model.
+---
 
-Modular pipeline with stages for data ingestion, transformation, model training, and evaluation.
+## 🚀 Features
 
-Configuration management using YAML files.
+- 🤖 **Abstractive Summarization** using the Pegasus model.
+- ⚙️ **Modular Pipeline**: Includes stages for data ingestion, preprocessing, training, and evaluation.
+- 📁 **YAML-Based Configuration** for easy parameter tuning.
+- 🌐 **Streamlit Web App** for interactive summarization.
+- 🐳 **Docker Support** for containerized deployment.
 
-Streamlit web application for real-time text summarization.
+---
 
-
-
-📁 Project Structure
-
+## 📁 Project Structure
 
 Text-Summarizer-/
-├── .github/workflows/         # GitHub Actions workflows
-├── config/                    # Configuration files
-├── pegasus-samsum/            # Model checkpoints and runs
-├── research/                  # Research notebooks and experiments
-├── src/textSummarizer/        # Source code for the summarizer
-├── templates/                 # HTML templates for the web app
-├── .gitignore
-├── Dockerfile                 # Docker configuration
-├── LICENSE
-├── README.md
-├── app.py                     # Streamlit web application
-├── main.py                    # Entry point for the training pipeline
-├── params.yaml                # Hyperparameter configurations
-├── requirements.txt           # Python dependencies
-├── setup.py                   # Package setup
-├── template.py                # Template configurations
-⚙️ Installation
+
+├── .github/workflows/        # GitHub Actions workflows    
+├── config/ # Configuration files  
+├── pegasus-samsum/ # Model checkpoints and outputs  
+├── research/ # Research notebooks and experiments  
+├── src/textSummarizer/ # Source code for the summarizer  
+├── templates/ # HTML templates for Streamlit  
+├── .gitignore  
+├── Dockerfile # Docker configuration  
+├── LICENSE  
+├── README.md  
+├── app.py # Streamlit web app  
+├── main.py # Training pipeline entry point  
+├── params.yaml # Hyperparameter configs  
+├── requirements.txt # Dependencies  
+├── setup.py # Package setup  
+├── template.py # Template config  
 
 
-Clone the repository:
-git clone https://github.com/whoami-saloni/Text-Summarizer-.git
-cd Text-Summarizer-
 
-Create a virtual environment and activate it:
+---
 
+## ⚙️ Installation
 
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+1. **Clone the repository:**
 
-
-Install the dependencies:
-
-pip install -r requirements.txt
-🧪 Usage
-Training the Model
-To train the model using the predefined pipeline:
+   ```bash
+   git clone https://github.com/whoami-saloni/Text-Summarizer-.git
+   cd Text-Summarizer-
 
 
-python main.py
+2. **Create a virtual environment and activate it::**
 
-This script will execute the training pipeline as defined in main.py, utilizing configurations from params.yaml.
-GitHub
+   ```bash
+   python -m venv venv
+   source venv/bin/activate      # On Windows: venv\Scripts\activate
 
-Running the Web Application
-To launch the Streamlit web application for interactive summarization:
-GitHub
+3. **Install The Dependencies:**
 
-
-streamlit run app.py
-Access the application in your browser at http://localhost:8501.
-
-🛠️ Configuration
-Hyperparameters and other configurations are managed through the params.yaml file. Adjust the parameters as needed to customize the training and evaluation processes.
-GitHub
+   ```bash
+   pip install -r requirements.txt
 
 
-📄 License
+## 🧪 Usage
+
+1. **✅Train The Model:**
+
+   ```bash
+   python main.py
+
+ This will run the pipeline as defined in main.py, using configurations from params.yaml
+
+2. **🌐 Launch the Web App:**
+  To run the Streamlit-based web application
+   ```bash
+   streamlit run app.py
+   
+Then open your browser and go to: http://localhost:8501
+
+## 🛠️ Configuration
+All hyperparameters and paths are managed via the params.yaml file.
+Update this file to:
+
+- Change batch sizes, learning rate, and epochs
+
+- Set custom model checkpoints
+
+- Modify dataset paths
+
+## 📄 License
 This project is licensed under the MIT License.
 
-🙌 Acknowledgements
-This project leverages the following technologies and datasets:
-Medevel
+## 🙌 Acknowledgements
 
-Hugging Face Transformers
+This project uses the following tools and datasets:
 
-PyTorch
+- 🤗 [Hugging Face Transformers](https://huggingface.co/transformers/)
+- 🔦 [PyTorch](https://pytorch.org/)
+- 🧼 [Streamlit](https://streamlit.io/)
+- 🗣️ [SAMSum Dataset](https://huggingface.co/datasets/samsum)
 
-Streamlit
 
-SAMSum Dataset
-
-For more details and updates, please refer to the GitHub repository.
-
+  
 
 
